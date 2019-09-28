@@ -1,0 +1,19 @@
+{
+  "name": "webdeloperbootcamp",
+  "version": "1.0.0",
+  "description": "Refresh on JavaScript and jQuery, and learning JavaScript BackEnd, Node JS, Server Side Frameworks, and many more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurenceM2015/WebDeloperBootCamp.git"
+  },
+  "author": "Laurence Malonga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaurenceM2015/WebDeloperBootCamp/issues"
+  },
+  "homepage": "https://github.com/LaurenceM2015/WebDeloperBootCamp#readme"
+}

@@ -7,8 +7,13 @@ var todos = ["Buy New Turtle"];
 while(input !== "quit"){
     // List all the todo tasks
     if(input === "list") {
-        console.log(todos);
-
+        console.log("***********");
+        // forEach
+        todos.forEach(function(todo, i){
+            console.log(i + ": " + todo);
+        });
+        console.log("***********");
+       
     } else if (input === "new") {
         // Ask for new todo
         var newTodo = prompt("Enter New Todo");
