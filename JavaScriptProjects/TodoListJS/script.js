@@ -19,6 +19,15 @@ while(input !== "quit"){
         var newTodo = prompt("Enter New Todo");
         // add to todos array
         todos.push(newTodo);
+        console.log("Added Todo");
+
+    } else if(input === "delete"){
+        // ask for index of todo to be deleted
+        var index = prompt("Please enter index of todo to delete");
+        // delete that todo
+        //splice()
+        todos.splice(index,1);
+        console.log("Delete Todo" + index + " " );
     }
     // Ask again for new input
     var input = prompt("What would you like to do ?");
