@@ -9,3 +9,26 @@ let storyWords = story.split(' ')
 
 // 2: Cound the the total word in the story array
 console.log(storyWords.length);
+
+// 3: Count the total of the better word in the story array 
+let betterWords = storyWords.filter(word => {
+	return !unnecessaryWords.includes(word)
+})
+//console.log(betterWords);
+
+// 4: Count the overy used word in the story array
+let reallyUsed = 0;
+let veryUsed = 0;
+let basicallyUsed = 0;
+
+for (word of storyWords){
+  if (word === 'really'){
+    reallyUsed += 1;
+  } else if (word === "very"){
+    veryUsed += 1;
+  } else if (word === "basically"){
+    basicallyUsed += 1;
+  }
+}
+
+//console.log("You used the word really " + reallyUsed + ", very word " + veryUsed + ", and basically " + basicallyUsed + ".");
