@@ -5,6 +5,10 @@
 
 <ol>
     <li>To Do List with JavaScript only</li>
-    <li>Companies Database<li>
+    <li>
+        <h3>Companies Database:</h3>
+        <p>JavaScript higher order functions and working with arrays</p>
+     <li>
     <li>Movies Database</li>
+    <li>Mini Linter</li>
 </ol>
