@@ -10,4 +10,5 @@
     <li>Filter</li>
     <li>Reduce</li>
     <li>Sort</li>
+    <li>Combine all the hight order js functions</li>
 </ul>
