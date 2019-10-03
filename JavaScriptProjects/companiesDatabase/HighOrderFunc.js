@@ -12,6 +12,18 @@ const companies = [
 		{name: "company Nine",   	category: "Retail", 	    start: 1981, end: 1989},
 ];
 
+const ages = [ 33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+// Combine all the methods
+
+const combine = ages
+	.map(age => age * 2)
+	.filter(age => age >= 40)
+	.sort((a, b) => a - b)
+	.reduce((a, b) => a + b, 0);
+console.log(combine);
+
+
 // Printing companies using the simple for loop
 
 /*
@@ -28,8 +40,8 @@ ages.forEach(function (age) {
 	}
 });  */
 
-const ages = [ 33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
+// Using the Age arrays
 /*
 let canDrink = [];
 for(let i = 0; i < ages.length; i++){
@@ -83,14 +95,94 @@ const canDrink = ages.filter(function(age){
 */
 
 // Get companies that lasted 10 years or more
-const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
-	console.log(lastedTenYears);
+	/*
+		const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+		console.log(lastedTenYears);
+	*/
 
+// map hight function
 
+	// USING THE COMPANY ARRAY
+	/*
+		const companyName = companies.map(function(company) {
+		return company.name;
+		})
+		console.log(companyName);
+	*/
 
+	// Formating the Output with the function word
+	/*
+		const testMap = companies.map(function(company){
+		return `${company.name} [${company.start} - ${company.end}]`;
+		});
+	*/
 
-	
+	// Using the arrow function 
+	/*
+		const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+		console.log(testMap);
+	*/
 
-// map
+	// USING AGE ARRAY WITH MAP HIGHT ORDER FUNCTION
+
+	/*
+		const agesSquare = ages
+		.map(age => Math.sqrt(age))
+		.map(age => age * 2);
+		console.log(agesSquare);
+	*/
+
 // sort
+
+// Sorting companies array using sort hight order function
+	/*
+		const sortedCompanies = companies.sort(function(c1, c2){
+		if(c1.start > c2.start){
+				return 1;
+		}else {
+			return -1;
+	}
+ 	});
+	*/
+
+ // short version using arrow function (? return 1 or else : to return -1)
+ 
+ /*
+	const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+ 	console.log(sortedCompanies);
+ */
+
+ // Sort hight order function using ages array.
+	 /*
+	 	const sortAges = ages.sort((a,b) => a - b);
+	 	console.log(sortAges);
+	 */
+
 // reduce
+
+// Ages array using reduce
+
+// let ageSum = 0;
+// for(let i = 0; i < ages.length; i++) {
+//   ageSum += ages[i];
+// }
+
+// const ageSum = ages.reduce(function(total, age) {
+//   return total + age;
+// }, 0);
+
+// const ageSum = ages.reduce((total, age) => total + age, 0);
+
+// COMPANY ARRAY USING REDUCE HIGHT ORDER FUNCTION 
+
+/*
+	const totalYears = companies.reduce(function(total, company) {
+		return total + (company.end - company.start)
+	}, 0);
+*/
+
+// Using arrow function 
+/*
+	const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
+	console.log(totalYears);
+*/
