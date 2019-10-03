@@ -32,3 +32,23 @@ for (word of storyWords){
 }
 
 //console.log("You used the word really " + reallyUsed + ", very word " + veryUsed + ", and basically " + basicallyUsed + ".");
+
+// 5: Count how many sentences in the paragraph
+let sentences = 0;
+storyWords.forEach(word => {
+  if (word[word.length-1] === '.' || word[word.length-1] === '!') {
+    sentences+=1;
+  }
+});
+//console.log(sentences);
+
+// 6: Log the word, sentence and overused count in the console.
+
+console.log(storyWords.length);
+console.log(sentences);
+console.log("You used the word really " + reallyUsed + ", very word " 
++ veryUsed + ", and basically " + basicallyUsed + ".");
+
+// 7: Log better word array in a single string
+
+console.log(betterWords.join(' '));
