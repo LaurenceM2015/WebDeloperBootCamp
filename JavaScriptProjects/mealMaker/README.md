@@ -10,8 +10,6 @@
     <li>
     Inside the courses getter method, return an object that contains key/value pairs for appetizers, mains, and desserts.
     </li>
-    <li>Inside the courses getter method, return an object that contains key/value pairs for appetizers, mains, and desserts.
-    </li>
      <li>
         Inside the menu object, we are going to create a method called .addDishToCourse() which will be used to add a new dish to the specified course on the menu.
         The method should take in three parameters: the courseName, the dishName , and the dishPrice.
@@ -22,9 +20,14 @@
     <li>
     Now, we’re going to need another function which will allow us to get a random dish from a course on the menu, which will be necessary for generating a random meal.
     </li>
+    <li>Create a method inside the menu object called .getRandomDishFromCourse(). It will take in one parameter which is the courseName.</li>
+    <li>
+    Retrieve the array of the given course’s dishes from the menu‘s _courses object and store in a variable called dishes.
+    </li>
+     <li>
+        Now that we have a way to get a random dish from a course, we can create a .generateRandomMeal() function which will automatically generate a three-course meal for us. The function doesn’t need to take any parameters.
+     </li>
     <!-- 
-    <li></li>
-    <li></li>
     <li></li>
     <li></li>
     -->
