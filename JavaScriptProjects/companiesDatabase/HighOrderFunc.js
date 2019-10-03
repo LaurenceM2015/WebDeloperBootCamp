@@ -14,7 +14,7 @@ const companies = [
 
 const ages = [ 33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
-// Combine all the methods
+// Combine all the methods (map, filter, sort and reduce)
 
 const combine = ages
 	.map(age => age * 2)
