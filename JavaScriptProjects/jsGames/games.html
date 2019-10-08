@@ -5,7 +5,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-	<link rel="stylesheet" type="text/css" href="colorGame.css">
+	<link rel="stylesheet" type="text/css" href="games.css">
 </head>
 <body>
     <header id="MainHeader">
@@ -17,7 +17,7 @@
            <div class="row">
                 <div class="header-section text-center">
                    <div class="col-md-12">
-                        <h1 class="">
+                        <h1 class="text-white">
                             The Great <span id="colorDisplay">RGB</span> Color Game
                         </h1>
                    </div>
@@ -39,26 +39,31 @@
     </section>
 
     <section id="scoreKeeper">
-        <div id="scoreDisplay">
-            <h1>
-                <span id="p1Display">0</span> 
-                    to 
-                <span id="p2Display">0</span>
-            </h1>
-        </div>
-        
-        <div class="scoreKeeper__state">
-            <div id="display">
-                <p>Playing to: <span>5</span></p>
-            </div>
-                
-            <div id="Players">
-                <input type="number">
-                <button id="p1">Player One</button>
-                <button id="p2">Player Two</button>
-                <button id="reset">Reset The Game</button>
-            </div>
-        </div>
+        <div class="container">
+            <div class="row">
+                <div id="scoreDisplay">
+                    <h1>
+                        <span id="p1Display">0</span> 
+                            to 
+                        <span id="p2Display">0</span>
+                    </h1>
+                </div>
+            </div> <!-- ./ row -->
+            <div class="row">
+                <div class="scoreKeeper__state">
+                    <div id="display">
+                        <p>Playing to: <span>5</span></p>
+                    </div>
+                    <div id="Players">
+                        <input type="number">
+                        <button id="p1">Player One</button>
+                        <button id="p2">Player Two</button>
+                        <button id="reset">Reset The Game</button>
+                    </div>
+                </div>
+            </div> <!-- ./ row -->
+           
+        </div> <!-- ./ container -->
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -66,6 +71,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="scorekeeper.js"></script>
     <script type="text/javascript" src="colorGame.js"></script>
 </body>
 </html>

@@ -1,6 +1,10 @@
 #ColorGame{
-	padding: 5rem 0;
+	
 	background-color: #343a40;
+}
+
+section{
+	padding: 5rem 0;
 }
 
 .square {
@@ -12,10 +16,6 @@
 }
 
 
-
-h1 {
-	color: white;
-}
 
 /* SCORE KEEPER */
 
