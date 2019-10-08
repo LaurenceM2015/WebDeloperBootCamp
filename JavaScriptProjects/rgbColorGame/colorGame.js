@@ -16,6 +16,7 @@ let squares = document.querySelectorAll(".square");
 // picked the 4 sqaure
 let pickedColor = colors[3];
 let colorDisplay = document.getElementById("colorDisplay");
+let messageDisplay = document.querySelector("#message");
 
 colorDisplay.textContent = pickedColor;
 
@@ -29,19 +30,31 @@ for(let i = 0; i < squares.length; i++){
     // Add click listener to div with the class of sqaure.
     squares[i].addEventListener("click", function() {
         // Grad color of clicked square
-        let clickedColor = this.style.background;
+        let clickedColor = this.style.backgroundColor;
         
         // Compare color to pickedColor
        
         if(clickedColor === pickedColor) {
-			alert("Correct!");
+            messageDisplay.textContent = "It Correct, Well Done";
+            changeColors(clickedColor);
 		} else {
-			alert("WRONG!!!");
+            this.style.backgroundColor = "#343a40";
+            messageDisplay.textContent = "Sorry Try Again";
 		}
 
     });
 
 };
+
+/* Change header color and all the square */
+function changeColors(color) {
+    // Loop through all squares
+    for(let i = 0; i < squares.length; i++){
+        // change each color to match give color
+        squares[i].style.backgroundColor = color;
+    }
+    
+}
 
 
 
