@@ -27,10 +27,8 @@ colorDisplay.textContent = pickedColor;
 
 // Loop into the div with the class of sqaure.
 for(let i = 0; i < squares.length; i++){
-
     // Add initial color to div with the class of sqaure.
     squares[i].style.background = colors[i];
-    
 
     // Add click listener to div with the class of sqaure.
     squares[i].addEventListener("click", function() {
@@ -38,7 +36,6 @@ for(let i = 0; i < squares.length; i++){
         let clickedColor = this.style.backgroundColor;
         
         // Compare color to pickedColor
-       
         if(clickedColor === pickedColor) {
             messageDisplay.textContent = "It Correct, Well Done";
             changeColors(clickedColor);
@@ -88,7 +85,7 @@ function randomColor(){
     // Pick a 'blue' from 0 -255
     let b = Math.floor(Math.random() * 256);
     // return rgb color string
-    return "rgb(" + r + "," + g + "," + b + ")";
+    return "rgb(" + r + ", " + g + ", " + b + ")";
 
 }
 
