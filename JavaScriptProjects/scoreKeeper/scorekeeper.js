@@ -67,4 +67,5 @@ numInput.addEventListener('change', function(){
     winningScore = Number(this.value);
     reset();
 
-})
+});
+

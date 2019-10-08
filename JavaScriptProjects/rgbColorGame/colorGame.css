@@ -1,5 +1,5 @@
-body {
-	background-color: #232323;
+#ColorGame{
+	padding: 8rem 0;
 }
 
 .square {
@@ -10,11 +10,16 @@ body {
 	margin: 1.66%;
 }
 
-#container {
-	margin: 0px auto;
-	max-width: 600px;
-}
+
 
 h1 {
 	color: white;
 }
+
+/* SCORE KEEPER */
+
+.winner {
+    color: green;
+}
+
+
