@@ -14,7 +14,6 @@ let colors = [
 
 let colors = generateRandomColors(6);
 
-
 // Select all the square
 let squares = document.querySelectorAll(".square");
 
@@ -22,6 +21,7 @@ let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
 let colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
+let colorHeading = document.querySelector('#colGamHeading');
 
 colorDisplay.textContent = pickedColor;
 
@@ -39,6 +39,8 @@ for(let i = 0; i < squares.length; i++){
         if(clickedColor === pickedColor) {
             messageDisplay.textContent = "It Correct, Well Done";
             changeColors(clickedColor);
+            colorHeading.style.backgroundColor = clickedColor;
+
 		} else {
             this.style.backgroundColor = "#343a40";
             messageDisplay.textContent = "Sorry Try Again";
