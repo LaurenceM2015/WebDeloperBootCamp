@@ -1,23 +1,11 @@
 
 //let colors = [
-/*
-let colors = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 255, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 255, 255)",
-    "rgb(0, 0, 255)",
-    "rgb(255, 0, 255)",
-];
-
-*/
 
 // Generate Randome color of 6
 let colors = generateRandomColors(6);
 
 // Select all the square
 let squares = document.querySelectorAll(".square");
-
 
 // picked the 4 sqaure
 let pickedColor = pickColor();
@@ -31,7 +19,14 @@ colorResetButton.addEventListener("click", function(){
     // Generate all new colors
     colors = generateRandomColors(6);
     // Pick a new random color from array
+    pickedColor = pickColor();
+    // change colorDisplay to match picked color
+    colorDisplay.textContent = pickedColor;
     // change colors of sqaures
+    for(let i = 0; i < squares.length; i++){
+        squares[i].style.backgroundColor = colors[i];
+    }
+    colorHeading.style.backgroundColor = "#343a40";
 })
 
 
@@ -50,6 +45,7 @@ for(let i = 0; i < squares.length; i++){
         // Compare color to pickedColor
         if(clickedColor === pickedColor) {
             messageDisplay.textContent = "It Correct, Well Done";
+            colorResetButton.textContent = "Play Again?";
             changeColors(clickedColor);
             colorHeading.style.backgroundColor = clickedColor;
 
