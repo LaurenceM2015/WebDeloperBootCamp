@@ -13,7 +13,7 @@
     </header>
 
 	<section id="ColorGame" class="">
-       <div class="container">
+       <div class="container-fluid">
            <div class="row">
                 <div class="header-section text-center">
                    <div class="col-md-12" id="colGamHeading">
@@ -23,10 +23,15 @@
                    </div>
                 </div>
 
-                <div class="col-md-12 text-center">
-                    <span class="text-white text-center" id="message"></span>
+                <div class="col-md-12 text-center bg-white text-black">
+                    <div id="stripe" class="d-flex justify-content-around">
+                        <button id="reset">New Colors</button>
+                        <span class="text-center" id="message"></span>
+                    </div>
                 </div>
             </div>
+        </div> 
+        <div class="container">
             <div class="row clearfix">
                 <div class="square"></div>
                 <div class="square"></div>
@@ -34,8 +39,8 @@
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
-            </div>
-        </div> 
+            </div><!-- ./ row -->
+        </div> <!-- ./ container -->
     </section>
 
     <section id="scoreKeeper">

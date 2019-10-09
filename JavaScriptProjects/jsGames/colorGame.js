@@ -12,16 +12,28 @@ let colors = [
 
 */
 
+// Generate Randome color of 6
 let colors = generateRandomColors(6);
 
 // Select all the square
 let squares = document.querySelectorAll(".square");
+
 
 // picked the 4 sqaure
 let pickedColor = pickColor();
 let colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
 let colorHeading = document.querySelector('#colGamHeading');
+//let resetButton = document.querySelector("#reset");
+let colorResetButton = document.querySelector('#reset');
+
+colorResetButton.addEventListener("click", function(){
+    // Generate all new colors
+    colors = generateRandomColors(6);
+    // Pick a new random color from array
+    // change colors of sqaures
+})
+
 
 colorDisplay.textContent = pickedColor;
 
