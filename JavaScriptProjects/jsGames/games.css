@@ -22,4 +22,8 @@ section{
     color: green;
 }
 
+.selected {
+	background-color: blue;	
+}
+
 

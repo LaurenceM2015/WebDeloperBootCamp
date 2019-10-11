@@ -15,22 +15,32 @@
 	<section id="ColorGame" class="">
        <div class="container-fluid">
            <div class="row">
-                <div class="header-section text-center">
-                   <div class="col-md-12" id="colGamHeading">
+                <div class="header-section text-center" id="colGamHeading">
+                   <div class="col-md-12">
                         <h1 class="text-white">
                             The Great <span id="colorDisplay">RGB</span> Color Game
                         </h1>
                    </div>
                 </div>
-
-                <div class="col-md-12 text-center bg-white text-black">
-                    <div id="stripe" class="d-flex justify-content-around">
-                        <button id="reset">New Colors</button>
-                        <span class="text-center" id="message"></span>
+            </div>
+        </div>
+            <div class="color bg-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center text-black">
+                            <div id="stripe" class="d-flex justify-content-around">
+                                <button id="reset">New Colors</button>
+                                <span class="text-center" id="message"></span>
+                                <div>
+                                    <button id="easyBtn">Easy</button>
+                                    <button id="hardBtn" class="selected">Hard</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> 
+         
         <div class="container">
             <div class="row clearfix">
                 <div class="square"></div>

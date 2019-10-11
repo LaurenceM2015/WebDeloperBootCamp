@@ -1,8 +1,8 @@
 
 //let colors = [
-
+let numSquares = 6;
 // Generate Randome color of 6
-let colors = generateRandomColors(6);
+let colors = generateRandomColors(numSquares);
 
 // Select all the square
 let squares = document.querySelectorAll(".square");
@@ -14,10 +14,53 @@ let messageDisplay = document.querySelector("#message");
 let colorHeading = document.querySelector('#colGamHeading');
 //let resetButton = document.querySelector("#reset");
 let colorResetButton = document.querySelector('#reset');
+let easyBtn = document.querySelector("#easyBtn");
+let hardBtn = document.querySelector("#hardBtn");
+
+
+
+easyBtn.addEventListener("click", function() {
+    easyBtn.classList.add('selected');
+    hardBtn.classList.remove('selected');
+    numSquares = 3
+    // Generate all new colors
+    colors = generateRandomColors(numSquares);
+    // Pick a new random color from array
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    for(let i = 0; i < squares.length; i++){
+        if(colors[i]){
+            squares[i].style.backgroundColor = colors[i];
+        } else {
+            squares[i].style.display = 'none';
+        }
+    }
+    
+});
+
+hardBtn.addEventListener("click", function() {
+    hardBtn.classList.add('selected');
+    easyBtn.classList.remove('selected');
+    numSquares = 6;
+    // Generate all new colors
+    colors = generateRandomColors(numSquares);
+    // Pick a new random color from array
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    for(let i = 0; i < squares.length; i++){
+       
+        squares[i].style.backgroundColor = colors[i];
+        squares[i].style.display = 'block';
+       
+    }
+    
+});
+
 
 colorResetButton.addEventListener("click", function(){
+    
     // Generate all new colors
-    colors = generateRandomColors(6);
+    colors = generateRandomColors(numSquares);
     // Pick a new random color from array
     pickedColor = pickColor();
     // change colorDisplay to match picked color
